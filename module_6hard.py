@@ -1,13 +1,11 @@
-import math
-
 class Figure:
     __sides = []
     __color = []
     filled = False
 
-    def __init__(self, rgb, *side):  # палитра и стороны
+    def __init__(self, rgb, *side):
         self.color = list(rgb)
-        self.side = side[0]  # берём только первое значение
+        self.side = side[0]  
         self.filled = True
 
     def get_color(self):
@@ -60,8 +58,7 @@ class Circle(Figure):
 
     def get_square(self):
         self.set_radius()
-        return (self.__radius ** 2) * 3.141569  # как в школе через радиус
-        # return ((self.side)**2)/(4 * 3.141569) # через длину окружности
+        return (self.__radius ** 2) * 3.141569  
 
 class Triangle(Figure):
     sides_count = 3
